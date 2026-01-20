@@ -2,6 +2,8 @@
 
 An intelligent automation system for Instagram using Droidrun and Google Gemini AI. This project provides two specialized agents to automate Instagram interactions saving precious time for the user while they can indulge in other productive aactivities.
 
+https://contrib.rocks/image?repo=OWNER/REPO
+
 ## 🤖 Agents
 
 ### 1. Reel Reactor
@@ -187,6 +189,7 @@ For issues related to:
 ---
 
 **Built with ❤️ for the Hackathon**
+
 
 
 
