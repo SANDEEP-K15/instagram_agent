@@ -1,6 +1,6 @@
 # Instagram Automation Agent - Hackathon Project
 
-An intelligent automation system for Instagram using Droidrun and Google Gemini AI. This project provides two specialized agents to automate Instagram interactions saving precious time for the user while they can indulge in other productive aactivities.
+An intelligent automation system for Instagram using Droidrun and Google Gemini AI. This project provides two specialized agents to automate Instagram interactions, saving precious time for the user while they can indulge in other productive activities.
 
 ## Contributors
 
@@ -19,7 +19,7 @@ Automatically reacts to unread reels in Instagram Direct Messages. The agent:
 - Reacts with appropriate emojis based on content sentiment
 
 ### 2. Feed Customiser
-Customizes the urser's Instagram explore feed by training it with their interests. The agent:
+Customizes the user's Instagram explore feed by training it with their interests. The agent:
 - Takes user preferences as input (e.g., "Educational, Funny, Marvel edits")
 - Searches for relevant content in Instagram Explore
 - Likes 10 continuous posts/reels per interest category
@@ -28,15 +28,15 @@ Customizes the urser's Instagram explore feed by training it with their interest
 ## Technologies
 - python
 - droidrun
-   the main component of our project that controlls the actions on the phone
+   The main component of our project that controls the actions on the phone
 
 ## Basic Working
-- using the droidun python framework we read all the entities on the screen and then we can cleverly promt the agents to run the phone without any interference from the user.
-- then the user can choose which agent to run and let the agent automatically do the desiered task.
+- Using the Droidun Python framework, we read all the entities on the screen, and then we can cleverly prompt the agents to run the phone without any interference from the user.
+- then the user can choose which agent to run and let the agent automatically do the desired task.
 
-- right now the model has to open the reel to judge what reaction to give but we can improve it to judge the reel just based on the instagram reel over and any text wriitten on the reel cover
-- but for that we need an updated version of droidrun which can detect text on images for now it can only detect readable entities like text boxes and iamges but no text as an image
-- further more we can improve its speed by using a more advanced AI and also engineering the prompt using CoT (chain of thinking) concepts to improve its performance and speed
+- Right now, the model has to open the reel to judge what reaction to give, but we can improve it to judge the reel just based on the Instagram reel over and any text written on the reel cover
+- but for that, we need an updated version of DroidRun, which can detect text on images. For now, it can only detect readable entities like text boxes and iamges but no text as an image
+- Furthermore, we can improve its speed by using a more advanced AI and also engineering the prompt using CoT (chain of thinking) concepts to improve its performance and speed
 
 ## 📋 Prerequisites
 
@@ -98,7 +98,7 @@ You'll be presented with a menu:
 ```
 Available Agents:
   1. Reel Reactor - React to unread reels in Direct Messages
-  2. Feed Customiser - Customize explore feed based on interests
+  2. Feed Customiser - Customize the explore feed based on interests
   3. Exit
 ```
 
@@ -194,6 +194,7 @@ For issues related to:
 ---
 
 **Built with ❤️ for the Hackathon**
+
 
 
 
