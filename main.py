@@ -35,9 +35,9 @@ async def main():
     try:
         get_api_key()
     except ValueError as e:
-        print(f"❌ Error: {e}")
-        print("\nPlease set your GEMINI_API_KEY environment variable.")
-        print("You can create a .env file with: GEMINI_API_KEY=your_api_key_here")
+        print(f"[ERROR] {e}")
+        print("\nPlease set your OPENAI_API_KEY environment variable.")
+        print("You can create a .env file with: OPENAI_API_KEY=your_api_key_here")
         sys.exit(1)
     
     while True:
@@ -45,7 +45,7 @@ async def main():
         choice = input("Select an option (1-3): ").strip()
         
         if choice == "1":
-            print("\n🚀 Starting Reel Reactor Agent...")
+            print("\n[STARTING] Reel Reactor Agent...")
             print("This agent will react to unread reels in your Instagram DMs.\n")
             
             try:
@@ -60,17 +60,17 @@ async def main():
                 print("="*60 + "\n")
                 
             except Exception as e:
-                print(f"\n❌ Error occurred: {e}\n")
+                print(f"\n[ERROR] Error occurred: {e}\n")
                 
         elif choice == "2":
-            print("\n🚀 Starting Feed Customiser Agent...")
+            print("\n[STARTING] Feed Customiser Agent...")
             print("Enter your interests (comma-separated):")
             print("Example: Educational, Funny, Marvel edits, Coding tips\n")
             
             user_preferences = input("Your interests: ").strip()
             
             if not user_preferences:
-                print("❌ Error: Please provide at least one interest.\n")
+                print("[ERROR] Please provide at least one interest.\n")
                 continue
             
             print(f"\nProcessing preferences: {user_preferences}")
@@ -88,19 +88,19 @@ async def main():
                 print("="*60 + "\n")
                 
             except Exception as e:
-                print(f"\n❌ Error occurred: {e}\n")
+                print(f"\n[ERROR] Error occurred: {e}\n")
                 
         elif choice == "3":
-            print("\n👋 Goodbye!\n")
+            print("\n[GOODBYE] Exiting...\n")
             break
             
         else:
-            print("❌ Invalid choice. Please select 1, 2, or 3.\n")
+            print("[ERROR] Invalid choice. Please select 1, 2, or 3.\n")
         
         # Ask if user wants to continue
         continue_choice = input("Do you want to run another agent? (y/n): ").strip().lower()
         if continue_choice != 'y':
-            print("\n👋 Goodbye!\n")
+            print("\n[GOODBYE] Exiting...\n")
             break
 
 
@@ -108,8 +108,8 @@ if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
-        print("\n\n⚠️  Interrupted by user. Exiting...\n")
+        print("\n\n[INTERRUPTED] Interrupted by user. Exiting...\n")
         sys.exit(0)
     except Exception as e:
-        print(f"\n❌ Fatal error: {e}\n")
+        print(f"\n[FATAL ERROR] {e}\n")
         sys.exit(1)

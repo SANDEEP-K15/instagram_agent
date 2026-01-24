@@ -15,19 +15,19 @@ load_dotenv(dotenv_path=env_path, override=True)
 
 def get_api_key() -> str:
     """
-    Get Gemini API key from environment variable.
+    Get OpenAI API key from environment variable.
     
     Raises:
         ValueError: If API key is not found in environment variables.
     
     Returns:
-        str: The Gemini API key
+        str: The OpenAI API key
     """
-    api_key = os.getenv("GEMINI_API_KEY")
+    api_key = os.getenv("OPENAI_API_KEY")
     
     if not api_key:
         raise ValueError(
-            "GEMINI_API_KEY environment variable not set. "
+            "OPENAI_API_KEY environment variable not set. "
             "Please set it in your .env file or environment."
         )
     return api_key
@@ -35,7 +35,7 @@ def get_api_key() -> str:
 
 def create_config(max_steps: int = 30) -> DroidrunConfig:
     """
-    Create Droidrun configuration with Gemini LLM profiles.
+    Create Droidrun configuration with OpenAI LLM profiles.
     
     Args:
         max_steps: Maximum number of steps the agent can take (default: 30)
@@ -45,10 +45,10 @@ def create_config(max_steps: int = 30) -> DroidrunConfig:
     """
     api_key = get_api_key()
     
-    # Create LLM profile for Gemini
-    gemini_profile = LLMProfile(
-        provider="GoogleGenAI",
-        model="models/gemini-2.5-flash",
+    # Create LLM profile for OpenAI
+    openai_profile = LLMProfile(
+        provider="OpenAI",
+        model="gpt-4o",
         kwargs={"api_key": api_key}
     )
     
@@ -59,11 +59,11 @@ def create_config(max_steps: int = 30) -> DroidrunConfig:
             max_steps=max_steps,
         ),
         llm_profiles={
-            "manager": gemini_profile,
-            "executor": gemini_profile,
-            "text_manipulator": gemini_profile,
-            "app_opener": gemini_profile,
-            "scripter": gemini_profile
+            "manager": openai_profile,
+            "executor": openai_profile,
+            "text_manipulator": openai_profile,
+            "app_opener": openai_profile,
+            "scripter": openai_profile
         }
     )
     
