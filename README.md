@@ -1,4 +1,4 @@
-# Instagram Automation Agent - Hackathon Project
+# Instagram Automation Agent
 
 An intelligent automation system for Instagram using Droidrun and Google Gemini AI. This project provides two specialized agents to automate Instagram interactions, saving precious time for the user while they can indulge in other productive activities.
 
@@ -187,7 +187,7 @@ For issues related to:
 
 ---
 
-**Built with ❤️ for the Hackathon**
+
 
 
 
